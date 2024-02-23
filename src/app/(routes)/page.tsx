@@ -1,6 +1,9 @@
 import { TextGenerateEffectDemo } from "@/components/text-effect";
 import { Separator } from "@/components/ui/separator";
 
+import Profile from "@/app/assets/profile.jpeg";
+import Image from "next/image";
+
 export default function HomePage() {
   return (
     <main className="container relative flex h-screen flex-col">
@@ -31,14 +34,14 @@ export default function HomePage() {
       </div>
 
       <section className="mt-[340px] flex flex-col sm:px-28">
-        <div className="flex items-center gap-x-5">
-          <span>01.</span>
-          <h2>page teste</h2>
+        <div className="flex items-center gap-x-3">
+          <span className="mt-2 text-lg font-bold text-text_span">01.</span>
+          <h2 className="text-3xl text-text_primary">Sobre min</h2>
           <Separator className="w-1/3 bg-[#233554]" />
         </div>
 
-        <div className="mt-14 max-w-2xl">
-          <p>
+        <div className="mb-28 mt-14 flex h-auto w-full flex-col gap-x-4 sm:flex-row sm:flex-wrap">
+          <p className="order-1 mb-10 max-w-2xl tracking-wider text-text_secondary">
             Hello! My name is Brittany and I enjoy creating things that live on
             the internet. My interest in web development started back in 2012
             when I decided to try editing custom Tumblr themes — turns out
@@ -53,11 +56,21 @@ export default function HomePage() {
             been working with recently:
           </p>
 
-          <div className="mt-6 grid max-w-[500px] grid-cols-2 gap-2">
+          <div className="order-2  -mt-[20px] mr-12 grid min-w-[300px] grid-cols-2 gap-y-3 sm:order-3 sm:-mt-[180px] sm:min-w-[400px] sm:py-10">
             <span>JavaScript (ES6+)</span>
             <span>JavaScript (ES6+)</span>
             <span>JavaScript (ES6+)</span>
             <span>JavaScript (ES6+)</span>
+          </div>
+
+          <div className="relative z-20 order-3 mt-8 h-[300px] w-[260px] overflow-visible rounded-xl bg-slate-100 sm:order-1  sm:ml-6 sm:mt-0 sm:h-[400px] sm:w-[400px]">
+            <div className="z-10 h-[300px] w-[260px] translate-x-4 translate-y-4 rounded-md border border-text_span sm:h-[400px] sm:w-[400px]" />
+            <Image
+              src={Profile}
+              layout="fill"
+              alt="Foto de Perfil"
+              className=" rounded-md object-cover object-top"
+            />
           </div>
         </div>
       </section>
