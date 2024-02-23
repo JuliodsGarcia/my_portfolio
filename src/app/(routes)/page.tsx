@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 
 import Profile from "@/app/assets/profile.jpeg";
 import Image from "next/image";
+import { Play } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -56,11 +57,30 @@ export default function HomePage() {
             been working with recently:
           </p>
 
-          <div className="order-2  -mt-[20px] mr-12 grid min-w-[300px] grid-cols-2 gap-y-3 sm:order-3 sm:-mt-[180px] sm:min-w-[400px] sm:py-10">
-            <span>JavaScript (ES6+)</span>
-            <span>JavaScript (ES6+)</span>
-            <span>JavaScript (ES6+)</span>
-            <span>JavaScript (ES6+)</span>
+          <div className="order-2  -mt-[20px] mr-12 grid min-w-[300px] grid-cols-3 gap-y-3 sm:order-3 sm:-mt-[180px] sm:min-w-[400px] sm:py-10">
+            <span className="flex items-center gap-x-2 text-text_secondary">
+              <Play className="h-4 w-4 text-text_span" />
+              JavaScript (ES6+)
+            </span>
+
+            <span className="flex items-center gap-x-2 text-text_secondary">
+              <Play className="h-4 w-4 text-text_span" />
+              React
+            </span>
+
+            <span className="flex items-center gap-x-2 text-text_secondary">
+              <Play className="h-4 w-4 text-text_span" />
+              Node.js
+            </span>
+
+            <span className="flex items-center gap-x-2 text-text_secondary">
+              <Play className="h-4 w-4 text-text_span" />
+              Next.js
+            </span>
+            <span className="flex items-center gap-x-2 text-text_secondary">
+              <Play className="h-4 w-4 text-text_span" />
+              Nest.js
+            </span>
           </div>
 
           <div className="relative z-20 order-3 mt-8 h-[300px] w-[260px] overflow-visible rounded-xl bg-slate-100 sm:order-1  sm:ml-6 sm:mt-0 sm:h-[400px] sm:w-[400px]">
