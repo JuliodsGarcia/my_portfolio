@@ -12,12 +12,12 @@ export function FloatingNavMain() {
       icon: <Home className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "About",
+      name: "Jobs",
       link: "/about",
       icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Contact",
+      name: "Projetos",
       link: "/contact",
       icon: (
         <MessageCircle className="h-4 w-4 text-neutral-500 dark:text-white" />
@@ -33,8 +33,8 @@ export function FloatingNavMain() {
 }
 const DummyContent = () => {
   return (
-    <div className="relative flex h-[4rem] w-full  justify-end">
-      <div className="mt-10 flex w-full items-center justify-end gap-x-1 px-20">
+    <div className="relative flex h-[5rem] w-full  justify-end shadow-lg">
+      <div className="0 flex w-full items-center justify-end gap-x-1 px-20">
         <Button
           variant="link"
           className="flex items-center gap-x-1 text-base  text-white hover:no-underline"
