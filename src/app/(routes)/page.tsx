@@ -1,43 +1,42 @@
-import { TextGenerateEffectDemo } from "@/components/text-effect";
-
 import About from "@/components/about";
-import { LampDemo } from "@/components/LampDemo";
+import { TextGenerateEffectDemo } from "../../components/text-effect";
 
 export default function HomePage() {
   return (
-    <main className="relative mx-auto flex h-screen flex-col bg-gradient-to-r from-[#0A192F] via-[#18243afb] to-[#151b27]">
-      <div className="mt-56 flex flex-col sm:px-28">
-        <span className="mb-2 ml-2 font-semibold text-text_span sm:ml-6">
-          Olá, meu nome é
-        </span>
-        <h1 className="text-[40px] font-bold tracking-wider text-text_primary sm:mt-4 sm:text-8xl">
-          Julio Cesar.
-        </h1>
-        <article className="space-y-3 text-left">
-          <TextGenerateEffectDemo />
+    <main className="relative mx-auto flex h-screen flex-col bg-primary/20">
+      <div
+        className="absolute -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] opacity-10 [background-size:20px_26px] 
+        [mask-image:radial-gradient(ellipse_30%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+      />
 
-          <p className="text-[1rem] text-text_secondary sm:max-w-2xl">
-            Sou um engenheiro de software especializado em construir (e
-            ocasionalmente projetar) experiências digitais excepcionais.
-            Atualmente, estou focado na construção de produtos acessíveis e
-            centrados no ser humano na Upstatement.
-          </p>
-        </article>
+      <div className="container mx-auto mt-32  flex w-full flex-col justify-center space-y-5 lg:mt-56 lg:px-52">
+        <p className="ml-2 font-medium text-text_span lg:ml-5 lg:text-lg">
+          Olá, meu nome é
+        </p>
+        <h2 className="text-5xl font-bold text-text_primary antialiased lg:text-7xl">
+          Julio Cesar
+        </h2>
+        <TextGenerateEffectDemo />
+        <p className="max-w-[700px] tracking-wider text-text_primary">
+          Sou um entusiasta da tecnologia e estou mergulhando no mundo da
+          programação com uma paixão fervorosa. Estou no início da minha
+          jornada, buscando aprender e crescer constantemente. Atualmente, estou
+          focado em construir experiências digitais envolventes e acessíveis,
+          explorando as possibilidades emocionantes que a programação oferece.
+          Mal posso esperar para compartilhar meu progresso e projetos neste
+          emocionante caminho de aprendizado!
+        </p>
 
         <button
-          className="mt-10 rounded-sm border border-teal-500 bg-bg_primary px-4 py-4 text-sm font-bold tracking-wider text-text_span transition-all
-          duration-300 ease-in-out hover:-translate-x-2 hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(89,227,197)] sm:max-w-[300px]"
+          className="max-w-[300px] rounded-md border border-text_span bg-bg_primary px-4 py-4 text-sm font-semibold tracking-wider text-text_span transition duration-200 
+          ease-in-out hover:shadow-[4px_4px_0px_0px_rgba(97,249,213)]"
         >
           Minhas Stacks
         </button>
       </div>
 
-      <div>
+      <section className="">
         <About />
-      </div>
-
-      <section className="m-24 mx-auto mt-64 min-h-screen w-full bg-gradient-to-r from-[#0A192F] via-[#18243afb] to-[#151b27]">
-        <LampDemo />
       </section>
     </main>
   );

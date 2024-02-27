@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${roboto.className} relative bg-bg_primary text-white`}>
+      <body
+        className={`${roboto.className} relative min-h-screen bg-bg_primary text-white`}
+      >
         <SocialMediaIcons />
         {children}
       </body>

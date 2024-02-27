@@ -6,10 +6,10 @@ import Profile from "@/app/assets/profile.jpeg";
 
 const About = () => {
   return (
-    <section className="mt-52 sm:m-24 sm:mt-[25rem]">
+    <section className="container mt-52 bg-primary/20 sm:mt-[18rem] lg:pl-36">
       <div className="mb-7 flex items-center">
-        <span className="mr-2 mt-1.5 text-text_span sm:text-2xl">01.</span>
-        <p className="text-2xl text-text_primary sm:text-4xl">Sobre min</p>
+        <span className="mr-2 mt-1 text-text_span sm:text-2xl">01.</span>
+        <p className="text-2xl text-text_primary sm:text-2xl">Sobre min</p>
         <Separator className="ml-4 h-[1px] w-[120px] bg-[#233554] sm:min-w-[320px]" />
       </div>
       <div className="grid w-full grow grid-cols-2">
@@ -56,8 +56,8 @@ const About = () => {
         </div>
 
         <div className="group order-3 transition-transform duration-1000 ease-in sm:-mt-5 sm:ml-10">
-          <div className="relative z-20 order-3 mt-8 h-[300px] w-[260px] translate-x-2 overflow-visible rounded-xl bg-slate-100  sm:order-1 sm:ml-6 sm:mt-0 sm:h-[400px] sm:w-[400px]">
-            <div className="z-10 h-[300px] w-[260px] translate-x-4 translate-y-4 rounded-md border border-text_span transition-transform duration-500 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2 sm:h-[400px] sm:w-[400px]" />
+          <div className="relative z-20 order-3 mt-8 h-[200px] w-[260px] translate-x-2 overflow-visible rounded-xl bg-slate-100  sm:order-1 sm:ml-6 sm:mt-0 sm:h-[300px] sm:w-[300px]">
+            <div className="z-10 h-[200px] w-[260px] translate-x-4 translate-y-4 rounded-md border border-text_span transition-transform duration-500 ease-in-out group-hover:translate-x-2 group-hover:translate-y-2 sm:h-[300px] sm:w-[300px]" />
             <Image
               src={Profile}
               layout="fill"

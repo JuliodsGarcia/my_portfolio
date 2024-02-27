@@ -12,14 +12,14 @@ const SocialMediaIcons = () => {
   const [isHoveredInsta, setIsHoveredInsta] = useState(false);
 
   return (
-    <div className="fixed bottom-7 left-6 h-[300px] w-fit space-y-4">
+    <div className="fixed bottom-7 left-6 z-50 h-[300px] w-fit space-y-4">
       <div className="hidden flex-col space-y-8 sm:flex">
         <Badge
           className="relative w-fit cursor-pointer overflow-visible bg-transparent hover:bg-transparent"
           onMouseEnter={() => setIsHoveredGit(true)}
           onMouseLeave={() => setIsHoveredGit(false)}
         >
-          <Github className="h-6 w-6 text-text_primary hover:text-[#5FF1D0]" />
+          <Github className="h-6 w-6 text-text_primary hover:-translate-y-1 hover:text-[#5FF1D0]" />
           {isHoveredGit && (
             <motion.div
               className="absolute left-12 flex items-center"
@@ -37,7 +37,7 @@ const SocialMediaIcons = () => {
           onMouseEnter={() => setIsHoveredLink(true)}
           onMouseLeave={() => setIsHoveredLink(false)}
         >
-          <Linkedin className="h-6 w-6 text-text_primary hover:text-[#5FF1D0]" />
+          <Linkedin className="h-6 w-6 text-text_primary hover:-translate-y-1 hover:text-[#5FF1D0]" />
           {isHoveredLink && (
             <motion.div
               className="absolute left-12"
@@ -57,7 +57,7 @@ const SocialMediaIcons = () => {
           onMouseEnter={() => setIsHoveredInsta(true)}
           onMouseLeave={() => setIsHoveredInsta(false)}
         >
-          <Instagram className="h-6 w-6 text-text_primary hover:text-[#5FF1D0]" />
+          <Instagram className="h-6 w-6 text-text_primary hover:-translate-y-1 hover:text-[#5FF1D0]" />
           {isHoveredInsta && (
             <motion.div
               className="absolute left-12"
