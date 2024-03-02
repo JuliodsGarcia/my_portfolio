@@ -15,19 +15,27 @@ const About = () => {
       <div className="grid w-full grow grid-cols-2">
         <div className="order-2 col-span-2 sm:col-span-1">
           <p className="max-w-2xl tracking-wider text-text_secondary sm:w-full">
-            Hello! My name is Brittany and I enjoy creating things that live on
-            the internet. My interest in web development started back in 2012
-            when I decided to try editing custom Tumblr themes — turns out
-            hacking together a custom reblog button taught me a lot about HTML &
-            CSS! Fast-forward to today, and I’ve had the privilege of working at
-            an advertising agency, a start-up, a huge corporation, and a
-            student-led design studio. My main focus these days is building
-            accessible, inclusive products and digital experiences at
-            Upstatement for a variety of clients. I also recently launched a
-            course that covers everything you need to build a web app with the
-            Spotify API using Node & React. Here are a few technologies I’ve
-            been working with recently:
+            Minha jornada no mundo do desenvolvimento começou em 2021, quando
+            estava ainda na faculdade cursando{" "}
+            <span className="font-semibold text-emerald-300">
+              análise em desenvolvimento de sistemas.
+            </span>{" "}
+            Foi fascinante descobrir como funcionava um software no backstage me
+            proporcionou valiosos aprendizados em{" "}
+            <span className="font-semibold text-emerald-300">
+              HTML, CSS e JavaScript.
+            </span>{" "}
+            <br />
+            Em 2022, decidi me aventurar no mundo do desenvolvimento web,
+            alimentando minha paixão por construir na web. Atualmente, estou
+            empenhado em aprimorar minhas habilidades de desenvolvimento web
+            enquanto estudo. Embora eu ainda não tenha experiência profissional,
+            tenho investido tempo e dedicação para absorver conhecimentos e
+            aplicá-los em projetos pessoais. <br />
+            Aqui estão algumas técnologias com as quais tenho trabalhado
+            recentemente:
           </p>
+
           <div className="mt-5 grid w-full grid-cols-2 gap-3 gap-x-4 text-nowrap text-sm font-semibold text-text_primary sm:max-w-[500px]">
             <span className="flex items-center gap-x-2">
               <Play className="h-4 w-4 text-text_span" />

@@ -2,25 +2,25 @@
 import React from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
-import { Home, MessageCircle, User } from "lucide-react";
+import { Home, CodeSquare, MessageCircle } from "lucide-react";
 import { Button } from "./ui/button";
 export function FloatingNavMain() {
   const navItems = [
     {
       name: "Home",
       link: "/",
-      icon: <Home className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "Jobs",
-      link: "/about",
-      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <Home className="h-4 w-4 text-text_span dark:text-white" />,
     },
     {
       name: "Projetos",
       link: "/contact",
+      icon: <CodeSquare className="h-4 w-4 text-text_span dark:text-white" />,
+    },
+    {
+      name: "Contato",
+      link: "/about",
       icon: (
-        <MessageCircle className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <MessageCircle className="h-4 w-4 text-text_span dark:text-white" />
       ),
     },
   ];
@@ -33,7 +33,7 @@ export function FloatingNavMain() {
 }
 const DummyContent = () => {
   return (
-    <div className="relative flex h-[5rem] w-full  justify-end shadow-lg">
+    <div className="relative flex h-[4rem] w-full  justify-end shadow-lg">
       <div className="0 flex w-full items-center justify-end gap-x-1 px-20">
         <Button
           variant="link"
@@ -50,15 +50,6 @@ const DummyContent = () => {
         >
           <strong className="text-text_span">02.</strong>
           <span className="font-semibold text-text_primary hover:text-text_span">
-            Jobs
-          </span>
-        </Button>
-        <Button
-          variant="link"
-          className="flex items-center gap-x-1 text-base  text-white hover:no-underline"
-        >
-          <strong className="text-text_span">03.</strong>
-          <span className="font-semibold text-text_primary hover:text-text_span">
             Projetos
           </span>
         </Button>
@@ -66,7 +57,7 @@ const DummyContent = () => {
           variant="link"
           className="flex items-center gap-x-1 text-base  text-white hover:no-underline"
         >
-          <strong className="text-text_span">04.</strong>
+          <strong className="text-text_span">03.</strong>
           <span className="font-semibold text-text_primary hover:text-text_span">
             Contato
           </span>
