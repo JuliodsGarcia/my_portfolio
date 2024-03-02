@@ -20,7 +20,6 @@ const content = [
       },
     ],
   },
-  // Adicione mais conteúdos conforme necessário
 ];
 
 const Works = () => {
@@ -50,7 +49,7 @@ const Works = () => {
               onClick={() => handleMenuClick(index)}
             >
               <p
-                className={`mr-10 w-[75px] text-nowrap text-base text-text_secondary sm:text-sm   ${
+                className={`mr-10 w-[75px] text-nowrap text-base text-text_secondary sm:text-sm ${
                   index === selectedContentIndex ? "text-text_span " : ""
                 }`}
               >
