@@ -1,33 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Separator } from "./ui/separator";
 
-const content = [
-  {
-    content: "IT. 4M",
-    works: [
-      {
-        title: "Título 1",
-        description: "Descrição 1",
-      },
-    ],
-  },
-  {
-    content: "Meu Trabalho",
-    works: [
-      {
-        title: "Título 2",
-        description: "Descrição 2",
-      },
-    ],
-  },
-];
-
 const Works = () => {
-  const [selectedContentIndex, setSelectedContentIndex] = useState(0);
+  // Estado para controlar o item de menu ativo
+  const [activeMenu, setActiveMenu] = useState<string>("");
 
-  const handleMenuClick = (index) => {
-    setSelectedContentIndex(index);
-  };
+  // Lista de itens de menu e seus componentes associados
+  const menuItems = [
+    { id: "item1", label: "Item 1", component: <p>Componente 1</p> },
+    { id: "item2", label: "Item 2", component: <p>Componente 2</p> },
+    { id: "item3", label: "Item 3", component: <p>Componente 2</p> },
+    { id: "item4", label: "Item 4", component: <p>Componente 2</p> },
+    { id: "item5", label: "Item 5", component: <p>Componente 2</p> },
+    // Adicione mais itens conforme necessário
+  ];
 
   return (
     <>
@@ -36,41 +22,24 @@ const Works = () => {
         <p className="text-2xl text-text_primary sm:text-2xl">Experiência</p>
         <Separator className="ml-4 h-[1px] w-[120px] bg-[#233554] sm:min-w-[320px]" />
       </div>
-      <div className="flex">
-        <div className="flex sm:flex-col sm:pl-28">
-          {content.map((section, index) => (
+      <div className="mb-40 flex w-full flex-col sm:flex-row sm:pl-28">
+        <div className="flex overflow-auto border-b border-transparent sm:flex-col sm:overflow-visible sm:border-b-0 sm:border-l-4">
+          {menuItems.map((item) => (
             <div
-              key={index}
-              className={`flex h-10 cursor-pointer items-center  pl-4 text-center hover:bg-[#112240] sm:min-h-[50px] ${
-                index === selectedContentIndex
-                  ? "border-l-2 border-[#5AE6C7] bg-[#112240]"
-                  : "border-l-2 border-[#233554] "
-              }`}
-              onClick={() => handleMenuClick(index)}
+              key={item.id}
+              className={`cursor-pointer whitespace-nowrap p-2 ${activeMenu === item.id ? "border-b-2 border-text_span sm:border-l-4 sm:border-b-transparent" : "border-[#233554] sm:border-l-4"}`}
+              onClick={() => setActiveMenu(item.id)}
             >
               <p
-                className={`mr-10 w-[75px] text-nowrap text-base text-text_secondary sm:text-sm ${
-                  index === selectedContentIndex ? "text-text_span " : ""
-                }`}
+                className={`-ml-2 px-5 py-3 ${activeMenu === item.id ? "bg-slate-400 text-text_span" : "text-text_secondary"}`}
               >
-                {section.content}
+                {item.label}
               </p>
             </div>
           ))}
         </div>
-
-        <div className="mb-36 flex -translate-x-[290px] translate-y-[80px] transform sm:min-h-[170px] sm:translate-x-[30px] sm:translate-y-[0px] sm:flex-col">
-          <div className="flex flex-col">
-            <h2 className="flex w-fit items-center px-10 py-3 text-2xl font-semibold text-text_primary">
-              {content[selectedContentIndex].content} <span></span>
-            </h2>
-            {content[selectedContentIndex].works.map((work, workIndex) => (
-              <div key={workIndex} className="flex flex-col px-10 py-3">
-                <span className="font-bold">{work.title}</span>
-                <span>{work.description}</span>
-              </div>
-            ))}
-          </div>
+        <div className="mt-5 flex-1 sm:ml-10 sm:mt-4">
+          {menuItems.find((item) => item.id === activeMenu)?.component}
         </div>
       </div>
     </>

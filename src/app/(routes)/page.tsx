@@ -8,14 +8,14 @@ import Works from "@/components/works";
 
 export default function HomePage() {
   return (
-    <main className="relative mx-auto flex h-screen flex-col bg-primary/20">
+    <main className="relative mx-auto flex h-screen flex-col bg-bg_primary/10">
       <div
         className="absolute top-[5%] -z-10 h-1/2 w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] opacity-10 [background-size:20px_26px] sm:h-full 
         sm:[mask-image:radial-gradient(ellipse_30%_50%_at_50%_50%,#000_70%,transparent_100%)]"
       />
 
-      <div className="container mx-auto mt-20  flex w-full flex-col justify-center space-y-5 sm:mt-20 lg:mt-56 lg:px-52">
-        <p className="ml-2 font-medium text-text_span lg:ml-5 lg:text-lg">
+      <div className="container mx-auto mt-32  flex w-full flex-col justify-center sm:mt-20 lg:mt-56 lg:px-52">
+        <p className="mb-4 ml-2 font-medium text-text_span lg:ml-5 lg:text-lg">
           Olá, meu nome é
         </p>
         <h2 className="text-5xl font-bold text-text_primary antialiased lg:text-7xl">
@@ -27,7 +27,7 @@ export default function HomePage() {
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5 }}
-          className="max-w-[700px] tracking-wider text-text_primary"
+          className="mt-6 max-w-[700px] tracking-wider text-text_primary"
         >
           Sou um desenvolvedor{" "}
           <span className="font-semibold text-text_span">Full Stack</span>{" "}
@@ -40,7 +40,7 @@ export default function HomePage() {
         </motion.p>
 
         <button
-          className="max-w-[300px] rounded-md border border-text_span bg-bg_primary px-4 py-4 text-sm font-semibold tracking-wider text-text_span transition duration-200 
+          className="mt-10 max-w-[300px] rounded-md border border-text_span bg-bg_primary px-4 py-4 text-sm font-semibold tracking-wider text-text_span transition duration-200 
           ease-in-out hover:shadow-[4px_4px_0px_0px_rgba(97,249,213)]"
         >
           Minhas Stacks

@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import SocialMediaIcons from "@/components/ui/social-media";
 import { FloatingNavMain } from "@/components/floating-nav-main";
+import SmallDevices from "@/components/wrapper-small-devices";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         className={`${roboto.className} relative min-h-screen bg-bg_primary text-white`}
       >
         <FloatingNavMain />
+
         <SocialMediaIcons />
         {children}
       </body>

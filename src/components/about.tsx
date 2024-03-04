@@ -6,13 +6,13 @@ import Profile from "@/app/assets/profile.jpeg";
 
 const About = () => {
   return (
-    <section className="container mt-52 bg-primary/20 sm:mt-[18rem] lg:pl-36">
+    <section className="container mt-52 bg-bg_primary sm:mt-[18rem] lg:pl-36">
       <div className="mb-7 flex items-center">
         <span className="mr-2 mt-1 text-text_span sm:text-2xl">01.</span>
         <p className="text-2xl text-text_primary sm:text-2xl">Sobre min</p>
         <Separator className="ml-4 h-[1px] w-[120px] bg-[#233554] sm:min-w-[320px]" />
       </div>
-      <div className="grid w-full grow grid-cols-2">
+      <div className="mt-10 grid w-full grow grid-cols-2">
         <div className="order-2 col-span-2 sm:col-span-1">
           <p className="max-w-2xl tracking-wider text-text_secondary sm:w-full">
             Minha jornada no mundo do desenvolvimento começou em 2021, quando
